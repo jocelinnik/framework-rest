@@ -51,10 +51,12 @@ public class ThreadConexao implements Runnable{
 				String recurso;
 				if(requisicao.getRecurso().equals("/")) {
 					recurso = this.pegarJSON();
+				}else if(requisicao.getRecurso().equals("/favicon.ico")){
+					continue;
 				}else {
 					recurso = null;
 				}
-				
+
 				RespostaHTTP resposta;
 				if(recurso!=null) {
 					resposta = new RespostaHTTP(requisicao.getProtocolo(), 200, "OK");

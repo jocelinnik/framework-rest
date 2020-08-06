@@ -17,9 +17,11 @@ public class Main{
 		
 		System.out.println(res);
 		System.out.println("Tempo de resposta da requisicao: " + (tempo2-tempo) + " ms.");
+		
+		callback = null;
 	}
 	
-	public static void addPessoa(int id, String nome) throws InvocationTargetException, IllegalAccessException, NoSuchMethodException {
+	public static void addPessoa(int id, String nome) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
 		Callback callback = new Callback("addPessoa", pessoa);
 		long tempo, tempo2;
 		
@@ -29,10 +31,12 @@ public class Main{
 		
 		System.out.println("Status " + res);
 		System.out.println("Tempo de resposta da requisicao: " + (tempo2-tempo) + " ms.");
+		
+		callback = null;
 	}
 	
 	public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-		getPessoas();
-		//addPessoa(4, "Programador violento");
+		//getPessoas();
+		addPessoa(4, "Programador violento");
 	}
 }

@@ -9,7 +9,7 @@ public class PessoaRecurso {
 		return p.getPessoas().toString();
 	}
 	
-	public int addPessoas(int id, String nome) {
+	public int addPessoa(int id, String nome) {
 		return p.addPessoa(id, nome);
 	}
 }

@@ -1,6 +1,5 @@
 package br.com.violencia.estudos.json;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 public class Main {
